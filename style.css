@@ -149,41 +149,38 @@ nav a:hover::after {
 
 .hero-logo {
     position: absolute;
-
-    width: 700px;
-    height: 700px;
+    width: 650px;
+    height: 650px;
 
     right: -80px;
     top: 50%;
 
     transform: translateY(-50%);
 
-    background-image: url("assets/logo.png");
+    background-image: url("./assets/logo.png");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 
-    opacity: 0.18;
+    opacity: 0.22;
 
-    filter: blur(0.5px);
-
-    mask-image:
-        radial-gradient(
-            circle,
-            black 25%,
-            rgba(0, 0, 0, 0.75) 50%,
-            transparent 75%
-        );
-
-    -webkit-mask-image:
-        radial-gradient(
-            circle,
-            black 25%,
-            rgba(0, 0, 0, 0.75) 50%,
-            transparent 75%
-        );
+    filter: blur(1px);
 
     z-index: 0;
+
+    -webkit-mask-image: radial-gradient(
+        circle,
+        black 20%,
+        rgba(0, 0, 0, 0.8) 50%,
+        transparent 75%
+    );
+
+    mask-image: radial-gradient(
+        circle,
+        black 20%,
+        rgba(0, 0, 0, 0.8) 50%,
+        transparent 75%
+    );
 }
 
 .hero-content {
