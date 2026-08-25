@@ -641,3 +641,65 @@ footer {
         padding: 25px;
     }
 }
+/* =========================
+   LOGO DE FOND GLOBAL
+========================= */
+
+.background-logo {
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    width: 850px;
+    height: 850px;
+
+    transform: translate(-50%, -50%);
+
+    background-image: url("./assets/logo.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 0.055;
+
+    filter: blur(1px);
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+/* Le contenu reste au-dessus du logo */
+
+.navbar,
+main,
+footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* On garde le logo d'accueil actuel moins visible
+   pour éviter d'avoir deux logos trop forts */
+
+.hero-logo {
+    opacity: 0.08;
+}
+
+@media (max-width: 800px) {
+    .background-logo {
+        width: 600px;
+        height: 600px;
+
+        opacity: 0.045;
+    }
+}
+
+@media (max-width: 480px) {
+    .background-logo {
+        width: 450px;
+        height: 450px;
+
+        opacity: 0.035;
+    }
+}
