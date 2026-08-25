@@ -26,13 +26,13 @@ html {
 body {
     background: var(--black);
     color: var(--white);
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', Arial, sans-serif;
     overflow-x: hidden;
 }
 
 ::selection {
     background: var(--orange);
-    color: #000;
+    color: #000000;
 }
 
 
@@ -44,6 +44,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+
     width: 100%;
     min-height: 72px;
 
@@ -53,10 +54,7 @@ body {
     align-items: center;
     justify-content: space-between;
 
-    background: rgba(5, 6, 9, 0.82);
-
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
+    background: rgba(5, 6, 9, 0.9);
 
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 
@@ -90,7 +88,11 @@ nav a {
     font-size: 14px;
     font-weight: 500;
 
-    transition: 0.25s ease;
+    transition: color 0.25s ease;
+}
+
+nav a:hover {
+    color: var(--white);
 }
 
 nav a::after {
@@ -106,11 +108,7 @@ nav a::after {
 
     background: var(--orange);
 
-    transition: 0.25s ease;
-}
-
-nav a:hover {
-    color: var(--white);
+    transition: width 0.25s ease;
 }
 
 nav a:hover::after {
@@ -169,7 +167,7 @@ nav a:hover::after {
 
     opacity: 0.18;
 
-    filter: blur(1px);
+    filter: blur(0.5px);
 
     z-index: 0;
 
@@ -177,25 +175,7 @@ nav a:hover::after {
 }
 
 
-/* Fondu du logo */
-
-.hero-logo::after {
-    content: "";
-
-    position: absolute;
-
-    inset: -20%;
-
-    background:
-        radial-gradient(
-            circle,
-            transparent 20%,
-            var(--black) 75%
-        );
-
-    pointer-events: none;
-}
-
+/* Contenu de l'accueil */
 
 .hero-content {
     position: relative;
@@ -251,12 +231,11 @@ nav a:hover::after {
 
     border-radius: 8px;
 
-    background:
-        linear-gradient(
-            135deg,
-            var(--yellow),
-            var(--orange)
-        );
+    background: linear-gradient(
+        135deg,
+        var(--yellow),
+        var(--orange)
+    );
 
     color: #090909;
 
@@ -269,7 +248,9 @@ nav a:hover::after {
     box-shadow:
         0 10px 30px rgba(255, 157, 0, 0.18);
 
-    transition: 0.25s ease;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 .button:hover {
@@ -328,12 +309,11 @@ nav a:hover::after {
 
     border-radius: 16px;
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(16, 26, 45, 0.85),
-            rgba(7, 10, 17, 0.95)
-        );
+    background: linear-gradient(
+        145deg,
+        rgba(16, 26, 45, 0.85),
+        rgba(7, 10, 17, 0.95)
+    );
 
     overflow: hidden;
 }
@@ -385,13 +365,12 @@ nav a:hover::after {
 
     inset: 0;
 
-    background:
-        linear-gradient(
-            90deg,
-            rgba(5, 6, 9, 0.98) 0%,
-            rgba(5, 6, 9, 0.78) 50%,
-            rgba(5, 6, 9, 0.35) 100%
-        );
+    background: linear-gradient(
+        90deg,
+        rgba(5, 6, 9, 0.98) 0%,
+        rgba(5, 6, 9, 0.78) 50%,
+        rgba(5, 6, 9, 0.35) 100%
+    );
 }
 
 .game-card-content {
@@ -485,7 +464,7 @@ nav a:hover::after {
 
     font-weight: 600;
 
-    transition: 0.25s ease;
+    transition: color 0.25s ease;
 }
 
 .email:hover {
@@ -504,8 +483,7 @@ footer {
 
     background: #030407;
 
-    border-top:
-        1px solid rgba(255, 255, 255, 0.06);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .footer-main {
@@ -559,7 +537,7 @@ footer {
 
 
 /* =========================
-   TABLETTES / MOBILE
+   TABLETTES
 ========================= */
 
 @media (max-width: 800px) {
@@ -621,7 +599,7 @@ footer {
 
 
 /* =========================
-   PETITS ÉCRANS
+   TELEPHONE
 ========================= */
 
 @media (max-width: 480px) {
