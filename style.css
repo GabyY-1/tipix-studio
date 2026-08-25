@@ -707,3 +707,7 @@ footer {
     font-weight: 700;
     margin-bottom: 30px;
 }
+.bold-text {
+    font-weight: 700 !important;
+    margin-bottom: 35px !important;
+}
