@@ -703,3 +703,7 @@ footer {
         opacity: 0.035;
     }
 }
+.description {
+    font-weight: 700;
+    margin-bottom: 30px;
+}
