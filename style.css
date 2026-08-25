@@ -711,3 +711,21 @@ footer {
     font-weight: 700 !important;
     margin-bottom: 35px !important;
 }
+/* =========================
+   LIENS
+========================= */
+
+.link-description {
+    font-weight: 700 !important;
+    margin-bottom: 18px !important;
+    color: var(--white) !important;
+}
+
+.link-description + .button {
+    margin-bottom: 35px;
+}
+
+.link-category {
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
